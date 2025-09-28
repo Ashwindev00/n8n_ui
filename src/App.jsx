@@ -47,9 +47,7 @@ export default function App() {
   const [copied, setCopied] = useState(false);
   const canSend = input.trim().length > 0 && !loading;
 
-  const endpoint = import.meta.env.PROD
-    ? (import.meta.env.VITE_N8N_URL || "https://ashwindev.app.n8n.cloud/webhook/harbourcare-chat")
-    : "/api/agent";
+  const endpoint = "/api/agent";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
